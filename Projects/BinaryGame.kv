@@ -1,0 +1,200 @@
+#:kivy 1.11.1
+
+<PhoneScreen>:
+    canvas.before:
+        Color:
+            rgba: (2/255, 32/255, 61/255, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        
+    BoxLayout:
+        
+        orientation:"vertical"
+        pos_hint: {'x':0, 'y':0}
+        size: root.width, root.height
+    
+        ToggleButton:
+            id: Start_Button
+            pos_hint: {'x': 0, 'y': 0} 
+            size_hint: 0.998, 0.05
+            text: "Start"
+            on_press: root._num_to_solve() 
+            background_normal: ""
+            background_color: (31/255, 53/255, 76/255, 1)
+            
+        Label:
+            text: "Instructions.\n You must click on the a bit to turn it on.\n Make sure to click the right bit because\nevery number that turns 1(on)\n will be add with their corresponding value\n and bits turned off(0) will be ignored.\n If you make a mistake the game will restart."
+            background_normal: ""
+            background_color: (82/255, 121/255, 143/255, 1)
+        GridLayout:
+
+            cols: 10
+            rows: 4
+            size_hint: None, None
+            size: root.width * 1, root.width * 0.2 
+            background_normal: ""
+            background_color: (82/255, 121/255, 143/255, 1)     
+            
+            ToggleButton:
+                id: one
+                text:"0"
+                font_size: 15
+                on_press: root.one()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0.5
+            ToggleButton:
+                id: two
+                text:"0"
+                font_size: 15
+                on_press: root.two()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0.5
+            ToggleButton:
+                id: four
+                text:"0"
+                font_size: 15
+                on_press: root.four()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: eight
+                text:"0"
+                font_size: 15
+                on_press: root.eight()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: sixteen
+                text:"0"
+                font_size: 15
+                on_press: root.sixteen()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: thirty_two
+                text:"0"
+                font_size: 15
+                on_press: root.thirty_two()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: sixty_four
+                text:"0"
+                font_size: 15
+                on_press: root.sixfour()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: one_two_eight
+                text:"0"
+                font_size: 15
+                on_press: root.onetwoeight()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            Button: 
+                text: "Add"
+                font_size: 15
+                on_press: root.solve()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            TextInput:
+                id: text_input
+                text: ""
+                size_hint: 1, 0
+            
+
+            #rows
+
+            ToggleButton:
+                id: _one
+                text:"0"
+                font_size: 15
+                on_press: root._one()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0.5
+            ToggleButton:
+                id: _two
+                text:"0"
+                font_size: 15
+                on_press: root._two()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: _four
+                text:"0"
+                font_size: 15
+                on_press: root._four()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: _eight
+                text:"0"
+                font_size: 15
+                on_press: root._eight()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: _sixteen
+                text:"0"
+                font_size: 15
+                on_press: root._sixteen()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: _thirty_two
+                text:"0"
+                font_size: 15
+                on_press: root._thirty_two()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: _sixty_four
+                text:"0"
+                font_size: 15
+                on_press: root._sixfour()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            ToggleButton:
+                id: _one_two_eight
+                text:"0"
+                font_size: 15
+                on_press: root._onetwoeight()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            Button: 
+                text: "Add"
+                font_size: 15
+                on_press: root._solve()
+                background_normal: ""
+                background_color: (31/255, 53/255, 76/255, 1)
+                size_hint: 0.5, 0
+            TextInput:
+                id: _text_input
+                text: ''
+                size_hint: 1, 0
+        Label: 
+            id: some_text
+            text: ''
+            halign: "center"
+            font_size: 32
+            pos_hint: {'x': .03, 'y':.2}
+        
+            
