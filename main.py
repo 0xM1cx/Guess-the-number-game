@@ -261,9 +261,12 @@ class PhoneScreen(Widget):
         else: 
             self.some_text.text = "Check your answers"
 
+
+
 class BinaryGame(App):
     def build(self):
         return PhoneScreen()
+
 
 
 if __name__ == '__main__':
